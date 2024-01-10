@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "bench-ui"
+version = "0.1.0"
+description = ""
+authors = ["Gamaliel Garcia <46827955+EGAMAGZ@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flet = "^0.18.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
