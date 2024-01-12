@@ -111,14 +111,6 @@ def main(page: ft.Page, output: str) -> None:
                     content=chart,
                     padding=ft.padding.all(20),
                 ),
-                ft.Text(
-                    value="Information about environment",
-                    style=ft.TextThemeStyle.HEADLINE_MEDIUM,
-                ),
-                ft.Card(
-                    content=ft.Column(ft.Text(f"{info}") for info in test_info),
-                    expand=True,
-                ),
             ],
         )
     )
@@ -158,7 +150,9 @@ if __name__ == "__main__":
         "Enter the number of multiple requests: "
     )
     output = subprocess.check_output(
-        f"ab -n {number_requests} -c {number_multiple_requests} http://minisaesipn.web.app/#/"
+        f"abs -n {number_requests} -c {number_multiple_requests} https://minisaesipn.web.app/#/"
     ).decode()
+
+    print(output)
 
     ft.app(target=lambda page: main(page=page, output=output))
